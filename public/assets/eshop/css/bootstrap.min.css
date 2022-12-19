@@ -2056,7 +2056,7 @@ legend {
 label {
     display: inline-block;
     margin-bottom: 5px;
-    font-weight: bold
+    color: #33333388
 }
 
 input[type="search"] {

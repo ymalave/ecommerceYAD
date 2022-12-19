@@ -63,13 +63,6 @@
 												<p><?= $name ?></p>
 												<a href="<?=ROOT?>add_to_cart/<?=$id?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Añadir al Carrito</a>
 											</div>
-											<!--<div class="product-overlay">
-												<div class="overlay-content">
-													<h2>$<?= $price ?></h2>
-													<p><?= $name ?></p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Añadir al Carrito</a>
-												</div>
-											</div>-->
 									</div>
 									
 								</div>

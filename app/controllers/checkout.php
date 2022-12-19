@@ -13,12 +13,15 @@
            
             $data['shopping'] = $producto->read("SELECT * FROM compra WHERE idusuario = '$iduser'");
 
-            foreach ($data['shopping'] as $row) 
-            {
-                $compra[]= $row['idproducto'];
+            if(is_array($data['shopping'])){
+                foreach ($data['shopping'] as $row) 
+                {
+                    $compra[]= $row['idproducto'];
+                }
+                $ids_str = "'". implode("','", $compra) ."'";
+                $data['product'] = $producto->read("SELECT * FROM producto WHERE idproducto IN ($ids_str)");  
             }
-            $ids_str = "'". implode("','", $compra) ."'";
-            $data['product'] = $producto->read("SELECT * FROM producto WHERE idproducto IN ($ids_str)");
+            
             
             $this->view('checkout',$data);
         }

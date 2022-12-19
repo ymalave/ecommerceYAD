@@ -28,7 +28,9 @@
 						<div class="shopper-info">
 							<p>Información del Comprador</p>
 							<form>
-								<input type="text" placeholder="Display Name">
+								<label>Nombre de usuario</label>
+								<input type="text" placeholder="<?= isset($data['user_data'][0]['userName']) ? $data['user_data'][0]['userName']: 'Nombre de usuario'  ?>">
+								<label>Id del usuario</label>
 								<input type="text" placeholder="User Name">
 							</form>
 						</div>
@@ -91,24 +93,24 @@
 				</div>
 			</div>
 			<div class="review-payment">
-				<h2>Review & Payment</h2>
+				<h2>Su Compra</h2>
 			</div>
 
 			<div class="table-responsive cart_info">
 				<table class="table table-condensed">
 					<thead>
 						<tr class="cart_menu">
-							<td class="image">Item</td>
+							<td class="image">Producto</td>
 							<td class="description"></td>
-							<td class="price">Price</td>
-							<td class="quantity">Quantity</td>
+							<td class="price">Precio</td>
+							<td class="quantity">Cantidad</td>
 							<td class="total">Total</td>
 							<td></td>
 						</tr>
 					</thead>
 					<tbody>
 						<?php
-						if(is_array($data['product'])){
+						if(isset($data['product'])){
 							$totalprice = 0;
 							foreach($data['product'] as $row){
 								$id = $row['idproducto']; 
@@ -141,9 +143,7 @@
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
-									<a add_id="<?=$id?>" onclick="add_quantity(this.getAttribute('add_id'))" class="cart_quantity_up" href=""> + </a>
-									<input oninput="edit_quantity(this.value, '<?=$id?>');" class="cart_quantity_input" type="text" name="quantity" value="<?=$quantity; ?>" autocomplete="off" size="2">
-									<a subtract_id="<?=$id?>" onclick="subtract_quantity(this.getAttribute('subtract_id'))" class="cart_quantity_down" href=""> - </a>
+									<input oninput="edit_quantity(this.value, '<?=$id?>');" class="cart_quantity_input" type="text" name="quantity" value="<?=$quantity; ?>" size="2">
 								</div>
 							</td>
 							<td class="cart_total">
