@@ -61,11 +61,21 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="<?= ROOT?>admin"><i class="fa fa-user"></i> Cuenta</a></li>
-								<li><a href="#"><i class="fa fa-star"></i> Lista de deseos</a></li>
-							<li><a href="<?=ROOT?>checkout"><i class="fa fa-crosshairs"></i> Caja</a></li>
+								<li><a href=""><i class="fa fa-user"></i> Cuenta</a></li>
+								<li><a href="<?=ROOT?>checkout"><i class="fa fa-crosshairs"></i> Caja</a></li>
 								<li><a href="<?= ROOT?>cart"><i class="fa fa-shopping-cart"></i> Carrito</a></li>
-								<li><a href="<?= ROOT?>login"><i class="fa fa-lock"></i> Iniciar Sesión	</a></li>
+								<?php
+								if(isset($_SESSION['idusuario'])){
+									?>
+										<li><a href="<?= ROOT?>logout"><i class="fa fa-lock"></i> Cerrar Sesión	</a></li>
+									<?php
+								}else{
+									?>
+                                        <li><a href="<?= ROOT?>login"><i class="fa fa-lock"></i> Iniciar Sesión	</a></li>
+                                    <?php
+								}
+								?>
+								
 							</ul>
 						</div>
 					</div>
@@ -91,9 +101,8 @@
 								<li class="dropdown"><a href="#">Tienda<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="<?= ROOT?>#productos">Productos</a></li>
-										<li><a href="product-details">Detalles de productos</a></li> 
-										<li><a href="checkout">Caja</a></li> 
-										<li><a href="cart">Carrito</a></li> 
+										<li><a href="<?= ROOT?>checkout">Caja</a></li> 
+										<li><a href="<?= ROOT?>cart">Carrito</a></li> 
 										<li><a href="<?= ROOT?>login">Iniciar Sesión</a></li> 
                                     </ul>
                                 </li> 

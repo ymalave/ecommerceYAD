@@ -9,7 +9,7 @@
             $data['user_data'] = $User->check_login();
             $shopping = $this->load_model("Compras");
             $producto = $this->load_model("Products");
-            $iduser = $_SESSION['idusuario'];
+            $iduser = isset($_SESSION['idusuario'])? $_SESSION['idusuario']: '';
            
             $data['shopping'] = $producto->read("SELECT * FROM compra WHERE idusuario = '$iduser'");
 

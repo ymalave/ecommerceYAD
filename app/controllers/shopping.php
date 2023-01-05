@@ -1,5 +1,5 @@
 <?php
-    //Clase para abrir nuestra página en Home (Principal)
+    //Clase para abrir registrar una compa
     class Shopping extends Controller
     {
         public function index()

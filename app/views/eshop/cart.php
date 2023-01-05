@@ -89,9 +89,9 @@
 				<div class="col-sm-6 pull-right">
 					<div class="total_area">
 						<ul>
-							<li>Sub Total <span>$<?=$totalprice; ?> </span></li>
+							<li>Sub Total <span>$<?=isset($totalprice) ? $totalprice: 0; ?> </span></li>
 							<li>Descuento <span>$0</span></li>
-							<li>Total <span>$<?=$totalprice; ?></span></li>
+							<li>Total <span>$<?=isset($totalprice) ? $totalprice: 0; ?></span></li>
 						</ul>
 							<a class="btn btn-default check_out" href="<?=ROOT?>checkout">Ir a Caja</a>
 					</div>

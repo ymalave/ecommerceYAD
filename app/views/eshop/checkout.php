@@ -11,17 +11,6 @@
 				</ol>
 			</div><!--/breadcrums-->
 
-			<div class="payment-options">
-				<span>
-					<label><input type="checkbox"> Direct Bank Transfer</label>
-				</span>
-				<span>
-					<label><input type="checkbox"> Check Payment</label>
-				</span>
-				<span>
-					<label><input type="checkbox"> Paypal</label>
-				</span>
-			</div>
 			<div class="shopper-informations" style="margin-top:0;">
 				<div class="row">
 					<div class="col-sm-3">
@@ -31,63 +20,33 @@
 								<label>Nombre de usuario</label>
 								<input type="text" placeholder="<?= isset($data['user_data'][0]['userName']) ? $data['user_data'][0]['userName']: 'Nombre de usuario'  ?>">
 								<label>Id del usuario</label>
-								<input type="text" placeholder="User Name">
+								<input type="text" placeholder="<?= isset($data['user_data'][0]['idusuario']) ? $data['user_data'][0]['idusuario']: '000'  ?>">
 							</form>
 						</div>
 					</div>
 					<div class="col-sm-5 clearfix">
 						<div class="bill-to">
-							<p>Bill To</p>
+							<p>Información del pago</p>
 							<div class="form-one">
 								<form>
-									<input type="text" placeholder="Company Name">
-									<input type="text" placeholder="Email*">
-									<input type="text" placeholder="Title">
-									<input type="text" placeholder="First Name *">
-									<input type="text" placeholder="Middle Name">
-									<input type="text" placeholder="Last Name *">
-									<input type="text" placeholder="Address 1 *">
-									<input type="text" placeholder="Address 2">
-								</form>
-							</div>
-							<div class="form-two">
-								<form>
-									<input type="text" placeholder="Zip / Postal Code *">
-									<select>
-										<option>-- Country --</option>
-										<option>United States</option>
-										<option>Bangladesh</option>
-										<option>UK</option>
-										<option>India</option>
-										<option>Pakistan</option>
-										<option>Ucrane</option>
-										<option>Canada</option>
-										<option>Dubai</option>
+									<label for="paydate">Fecha de pago</label>
+									<input type="date" placeholder="Fecha de pago" id="paydate">
+									<input type="text" placeholder="Numero de referencia">
+									<input type="text" placeholder="Monto">
+									<select class="form-select" aria-label="Default select example">
+										<option selected>Seleccione el tipo de pago</option>
+										<option value="1">Transferencia</option>
+										<option value="2">Pago Móvil</option>
+										<option value="3">PayPal</option>
 									</select>
-									<select>
-										<option>-- State / Province / Region --</option>
-										<option>United States</option>
-										<option>Bangladesh</option>
-										<option>UK</option>
-										<option>India</option>
-										<option>Pakistan</option>
-										<option>Ucrane</option>
-										<option>Canada</option>
-										<option>Dubai</option>
-									</select>
-									<input type="password" placeholder="Confirm password">
-									<input type="text" placeholder="Phone *">
-									<input type="text" placeholder="Mobile Phone">
-									<input type="text" placeholder="Fax">
 								</form>
 							</div>
 						</div>
 					</div>
 					<div class="col-sm-4">
 						<div class="order-message">
-							<p>Shipping Order</p>
-							<textarea name="message"  placeholder="Notes about your order, Special Notes for Delivery" rows="16"></textarea>
-							<label><input type="checkbox"> Shipping to bill address</label>
+							<p>Observaciones</p>
+							<textarea name="message"  placeholder="Notas sobre su pedido, en especial para su delivery" rows="16"></textarea>
 						</div>	
 					</div>					
 				</div>

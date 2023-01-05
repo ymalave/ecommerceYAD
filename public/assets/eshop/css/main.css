@@ -1893,15 +1893,14 @@ h2.title {
 }
 
 
-.form-two, .form-one {
+.form-one {
   float: left;
-  width: 47%
+  width: 100%
 }
 
 
 .shopper-info > form > input, 
-.form-two > form > select, 
-.form-two > form > input, 
+.form-one > form > select, 
 .form-one > form > input {
   background:#F0F0E9;
   border: 0 none;
@@ -1911,13 +1910,10 @@ h2.title {
   font-weight: 300
 }
 
-.form-two > form > select {
+.form-one > form > select {
   padding:10px 5px
 }
 
-.form-two {
-  margin-left: 5%
-}
 
 
 .order-message textarea {
@@ -1946,7 +1942,7 @@ h2.title {
 
 .payment-options {
   margin-bottom: 25px;
-  margin-top: -25px
+  margin-top: -60px
 }
 
 .payment-options span label {
