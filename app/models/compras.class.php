@@ -16,17 +16,10 @@
 
                 $Totalprice += $price;
 
-                $postQuery = "INSERT INTO `compra`(`idcompra`, `idproducto`, `cantidad`, `precio`, `idusuario`) VALUES (NULL, '$idproducto', $quantity, '$price', '$iduser')";
+                $postQuery = "INSERT INTO `compra`(`idcompra`, `idproducto`, `cantidad`, `precio`, `idusuario`) VALUES (NULL, '$idproducto', '$quantity', '$price', '$iduser')";
                 $postStmt = $this->con->prepare($postQuery);
                 $rc = $postStmt->execute();
             }
-
-            /*$product_encode = json_encode($idproducto);
-
-            //Insertar a la base de datos
-            $postQuery = "INSERT INTO `compra`(`idcompra`, `idproducto`, `precio`, `idusuario`) VALUES (NULL, '$product_encode', '$Totalprice', '$iduser')";
-            $postStmt = $this->con->prepare($postQuery);
-            $rc = $postStmt->execute();*/
 
             if ($postStmt) {
                 header("location: ".ROOT);
