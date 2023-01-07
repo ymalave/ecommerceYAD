@@ -102,9 +102,11 @@
 									<input type="text" placeholder="Monto">
 									<select class="form-select" aria-label="Default select example">
 										<option selected>Seleccione el tipo de pago</option>
-										<option value="1">Transferencia</option>
-										<option value="2">Pago Móvil</option>
-										<option value="3">PayPal</option>
+										<option value="Efectivo">Efectivo</option>
+										<option value="Divisa">Divisa</option>
+										<option value="Tansferencia">Transferencia</option>
+										<option value="Pago movil">Pago Móvil</option>
+										<option value="Paypal">PayPal</option>
 									</select>
 								</form>
 							</div>

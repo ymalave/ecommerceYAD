@@ -98,7 +98,7 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="<?= ROOT?>" class="active">Inicio</a></li>
-								<li class="dropdown"><a href="#">Tienda<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="#" class="">Tienda<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="<?= ROOT?>#productos">Productos</a></li>
 										<li><a href="<?= ROOT?>checkout">Caja</a></li> 
@@ -106,8 +106,7 @@
 										<li><a href="<?= ROOT?>login">Iniciar Sesión</a></li> 
                                     </ul>
                                 </li> 
-								<li><a href="404">404</a></li>
-								<li><a href="contact-us">Contacto</a></li>
+								<li><a href="contact-us" class="">Contacto</a></li>
 							</ul>
 						</div>
 					</div>
@@ -120,4 +119,3 @@
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->
-	
