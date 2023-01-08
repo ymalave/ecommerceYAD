@@ -91,33 +91,35 @@
 							</form>
 						</div>
 					</div>
-					<div class="col-sm-5 clearfix">
-						<div class="bill-to">
-							<p>Información del pago</p>
-							<div class="form-one">
-								<form>
-									<label for="paydate">Fecha de pago</label>
-									<input type="date" placeholder="Fecha de pago" id="paydate">
-									<input type="text" placeholder="Numero de referencia">
-									<input type="text" placeholder="Monto">
-									<select class="form-select" aria-label="Default select example">
-										<option selected>Seleccione el tipo de pago</option>
-										<option value="Efectivo">Efectivo</option>
-										<option value="Divisa">Divisa</option>
-										<option value="Tansferencia">Transferencia</option>
-										<option value="Pago movil">Pago Móvil</option>
-										<option value="Paypal">PayPal</option>
-									</select>
-								</form>
+					<form method="post">
+						<div class="col-sm-5 clearfix">
+							<div class="bill-to">
+								<p>Información del pago</p>
+								<div class="form-one">
+										<label for="paydate">Fecha de pago</label>
+										<input type="date" placeholder="Fecha de pago" id="paydate">
+										<input type="text" placeholder="Numero de referencia">
+										<input type="text" placeholder="Monto">
+										<select class="form-select" aria-label="Default select example">
+											<option selected>Seleccione el tipo de pago</option>
+											<option value="Efectivo">Efectivo</option>
+											<option value="Divisa">Divisa</option>
+											<option value="Tansferencia">Transferencia</option>
+											<option value="Pago movil">Pago Móvil</option>
+											<option value="Paypal">PayPal</option>
+										</select>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="order-message">
-							<p>Observaciones</p>
-							<textarea name="message"  placeholder="Notas sobre su pedido, en especial para su delivery" rows="16"></textarea>
-						</div>	
-					</div>					
+						<div class="col-sm-4">
+							<div class="order-message">
+								<p>Observaciones</p>
+								<textarea name="message"  placeholder="Notas sobre su pedido, en especial para su delivery" rows="16"></textarea>
+							</div>	
+						</div>
+
+						<button type="submit" class="btn btn-success pull-right" style="width: 250px; padding: 10px; border-radius: 0; margin-right: 20px; margin-bottom: 20px">Registrar pago</button>
+					</form>					
 				</div>
 			</div>
 		</div>

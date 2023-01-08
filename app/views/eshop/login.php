@@ -11,12 +11,12 @@
         }
         .abs-center{
             display:flex;
-            text-aling: center;
+            text-align: center;
             align-items: center;
             justify-content: center;
         }
         .signup-form{
-            text-aling: center;
+            text-align: center;
         }
     </style>
 	<section id="form"><!--form-->

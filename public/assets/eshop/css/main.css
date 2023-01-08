@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background:;
+  background: #fff;
   position: relative;
   font-weight:400px;
 }
@@ -899,7 +899,6 @@ h2.title {
   transition: height 500ms ease 0s;
   width: 100%;
   display: block;
-  opacity:;
 }
 
 .single-products:hover .product-overlay {
@@ -1064,8 +1063,6 @@ h2.title {
   background: #ccccc6;
 }
 
-.recommended_items  h2 {
-}
 
 .our_partners{
   overflow:hidden;
@@ -1432,14 +1429,6 @@ h2.title {
   overflow: hidden;
 }
 
-.login-form {
-
-}
-
-.signup-form {
-
-}
-
 .login-form h2, .signup-form h2 {
   color: #696763;
   font-family: 'Roboto', sans-serif;
@@ -1488,11 +1477,6 @@ h2.title {
   font-family: 'Roboto', sans-serif;
   padding: 6px 25px;
 }
-
-.login-form label{
-
-}
-
 
 .login-form label input {
   border: medium none;
@@ -1753,8 +1737,6 @@ h2.title {
   margin-right: 10px
 }
 
-.user_info > li > span {
-}
 
 .user_info input, select, textarea {
   background: #F0F0E9;
@@ -1903,8 +1885,8 @@ h2.title {
 
 
 .shopper-info > form > input, 
-.form-one > form > select, 
-.form-one > form > input {
+.form-one > select, 
+.form-one > input {
   background:#F0F0E9;
   border: 0 none;
   margin-bottom:10px;
@@ -1997,9 +1979,6 @@ h2.title {
   text-transform: uppercase;
   font-weight: 500;
   margin-bottom: 17px;
-}
-
-.single-blog-post > a {
 }
 
 .blog-post-area 

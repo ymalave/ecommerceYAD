@@ -75,7 +75,7 @@
 					
 				</table>
 			</div>
-			<a class="btn btn-default check_out pull-right" href="<?=ROOT?>shopping">Comprar</a>
+			<a class="btn btn-default check_out pull-right" style="width: 250px; padding: 10px; border-radius: 0; margin-right: 20px; margin-bottom: 20px" href="<?=ROOT?>shopping">Comprar</a>
 		</div>
 	</section> <!--/#cart_items-->
 
