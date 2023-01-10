@@ -16,11 +16,7 @@
                 $data['quantity'] = array_column($_SESSION['cart'], 'qty');
                 $data['product'] = $producto->read("SELECT * FROM producto WHERE idproducto IN ($ids_str)");
             }
-            /*foreach($data['product'] as $key => $row)
-            {
-                $mytotal = $row['precio']*$data['quantity'][$key];
-                $data['sub_total'] += $mytotal;
-            }*/
+            
             $this->view("cart", $data);//nombre de la pagina que vamos a visualizar
         }
 

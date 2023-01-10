@@ -34,11 +34,11 @@
             $user['password'] = trim($POST['password']);
             $user['password'] = hash('sha1', $user['password']);
             $this->connect();
-            $postQuery = "SELECT `idusuario`, `userName`, `password` FROM `usuario` WHERE (userName = ? AND password = ?)";
+            $postQuery = "SELECT `idusuario`, `userName` FROM `usuario` WHERE (userName = ? AND password = ?)";
             $stmt = $this->con->prepare($postQuery); //sql to log in user
             $stmt->bind_param('ss',  $user['userName'], $user['password']); //bind fetched parameters
             $stmt->execute(); //execute bind 
-            $stmt->bind_result($user['id'], $user['userName'], $password['password']); //bind result
+            $stmt->bind_result($user['id'], $user['userName']); //bind result
             $rs = $stmt->fetch();
             if($rs)
             {
@@ -50,11 +50,6 @@
             {
                 $err = "Incorrect Authentication Credentials ";
             }
-        }
-
-        public function get_user($url)
-        {
-            
         }
 
         public function check_login()

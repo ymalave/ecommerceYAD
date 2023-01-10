@@ -34,18 +34,10 @@
 							<?php
 							if(isset($data['product'])){
 								$totalprice = 0;
-								foreach($data['product'] as $row){
+								foreach($data['product'] as $key => $row){
 									$id = $row['idproducto']; 
 									$name = $row['nombreProducto'];
 									$price = $row['precio'];
-									foreach($data['shopping'] as $value)
-									{
-										if($id == $value['idproducto'])
-										{
-											$row['qty'] = $value['cantidad'];
-											break;
-										}
-									}
 									$quantity = $row['qty'];
 
 									$price2 = $price*$quantity;
@@ -85,22 +77,22 @@
 							<p>Información del Comprador</p>
 							<form>
 								<label>Nombre de usuario</label>
-								<input type="text" placeholder="<?= isset($data['user_data'][0]['userName']) ? $data['user_data'][0]['userName']: 'Nombre de usuario'  ?>">
-								<label>Id del usuario</label>
-								<input type="text" placeholder="<?= isset($data['user_data'][0]['idusuario']) ? $data['user_data'][0]['idusuario']: '000'  ?>">
+								<input type="text" value="<?= isset($data['user_data'][0]['userName']) ? $data['user_data'][0]['userName']: 'Nombre de usuario'  ?>" readonly>
+								<label>Id de la compra</label>
+								<input type="text" value="<?= isset($data['shopping'][0]['idcompra']) ? $data['shopping'][0]['idcompra']: '000'  ?>" readonly>
 							</form>
 						</div>
 					</div>
 					<form method="post">
-						<div class="col-sm-5 clearfix">
-							<div class="bill-to">
+						<div class="clearfix">
+							<div class="bill-to col-sm-5">
 								<p>Información del pago</p>
 								<div class="form-one">
 										<label for="paydate">Fecha de pago</label>
-										<input type="date" placeholder="Fecha de pago" id="paydate">
-										<input type="text" placeholder="Numero de referencia">
-										<input type="text" placeholder="Monto">
-										<select class="form-select" aria-label="Default select example">
+										<input type="date" placeholder="Fecha de pago" id="paydate" name="payDate">
+										<input type="text" placeholder="Numero de referencia" name="codeRefer">
+										<input type="text" placeholder="Monto" name="TotalToPay">
+										<select class="form-select" aria-label="Default select example" name="payMethod">
 											<option selected>Seleccione el tipo de pago</option>
 											<option value="Efectivo">Efectivo</option>
 											<option value="Divisa">Divisa</option>
@@ -110,14 +102,14 @@
 										</select>
 								</div>
 							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="order-message">
-								<p>Observaciones</p>
-								<textarea name="message"  placeholder="Notas sobre su pedido, en especial para su delivery" rows="16"></textarea>
-							</div>	
-						</div>
+							<div class="col-sm-4">
+								<div class="order-message">
+									<p>Observaciones</p>
+									<textarea name="message"  placeholder="Notas sobre su pedido, en especial para su delivery" rows="16"></textarea>
+								</div>	
+							</div>
 
+						</div>
 						<button type="submit" class="btn btn-success pull-right" style="width: 250px; padding: 10px; border-radius: 0; margin-right: 20px; margin-bottom: 20px">Registrar pago</button>
 					</form>					
 				</div>

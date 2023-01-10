@@ -57,7 +57,7 @@
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
 									<a add_id="<?=$id?>" onclick="add_quantity(this.getAttribute('add_id'))" class="cart_quantity_up" href=""> + </a>
-									<input oninput="edit_quantity(this.value, '<?=$id?>');" class="cart_quantity_input" type="text" name="quantity" value="<?=$quantity; ?>" autocomplete="off" size="2">
+									<input oninput="edit_quantity(this.value, '<?=$id?>');" class="cart_quantity_input" type="text" name="quantity" value="<?=$quantity; ?>" size="2">
 									<a subtract_id="<?=$id?>" onclick="subtract_quantity(this.getAttribute('subtract_id'))" class="cart_quantity_down" href=""> - </a>
 								</div>
 							</td>
