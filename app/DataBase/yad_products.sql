@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-01-2023 a las 05:06:32
+-- Tiempo de generación: 12-01-2023 a las 16:17:57
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.2
 
@@ -41,7 +41,8 @@ CREATE TABLE `compra` (
 --
 
 INSERT INTO `compra` (`idcompra`, `idproducto`, `cantidad`, `precio`, `idusuario`) VALUES
-(8, '[\"1\",\"2\",\"8\"]', '[7,3,5]', 12.4, 11);
+(8, '[\"1\",\"2\",\"8\"]', '[7,3,5]', 12.4, 11),
+(9, '[\"2\",\"7\",\"9\"]', '[3,5,2]', 15.8, 21);
 
 -- --------------------------------------------------------
 
@@ -64,7 +65,8 @@ CREATE TABLE `pago` (
 --
 
 INSERT INTO `pago` (`Referencia`, `fechaPago`, `Monto`, `idCompra`, `idUsuario`, `Metodo`, `Observaciones`) VALUES
-(126589, '2023-01-09', 12.6, 8, 11, 'Tansferencia', 0);
+(126589, '2023-01-09', 12.6, 8, 11, 'Tansferencia', 0),
+(154689, '2023-01-12', 15.8, 9, 21, 'Pago movil', 0);
 
 -- --------------------------------------------------------
 
@@ -146,7 +148,8 @@ INSERT INTO `usuario` (`idusuario`, `userName`, `phoneNumber`, `email`, `passwor
 (12, 'Darimel Salazar', '04147652669', 'Darimel@mail.com', 'fa42442fba58a653a245a83ff9898db1a7fa9a88', 'Costumer'),
 (17, 'ambar', '04166855658', 'ambaralvarado000@gmail.com', '8c31b65bdecdc9f18b695d7318186fd1feed690d', 'Costumer'),
 (18, '', '', '', '7505d64a54e061b7acd54ccd58b49dc43500b635', 'Costumer'),
-(20, 'aliendresl', '04148642547', 'aliendreslennys@gmail.com', 'c810b58a3ff71589397d8ff215e02f99cbc24b70', 'Costumer');
+(20, 'aliendresl', '04148642547', 'aliendreslennys@gmail.com', 'c810b58a3ff71589397d8ff215e02f99cbc24b70', 'Costumer'),
+(21, 'YoberthM', '04148642547', 'yjma17@gmail.com', '7af2d10b73ab7cd8f603937f7697cb5fe432c7ff', 'Costumer');
 
 --
 -- Índices para tablas volcadas
@@ -194,7 +197,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `compra`
 --
 ALTER TABLE `compra`
-  MODIFY `idcompra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idcompra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
@@ -212,7 +215,7 @@ ALTER TABLE `promocion`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `idusuario` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
