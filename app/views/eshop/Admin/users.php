@@ -14,39 +14,27 @@ MAIN CONTENT
                 <table class="table table-bordered table-striped table-condensed">
                     <thead>
                     <tr>
-                        <th>Referencia</th>
-                        <th>Fecha de Pago</th>
-                        <th class="numeric">Monto</th>
-                        <th class="numeric">Id de la Compra</th>
-                        <th class="numeric">Id del usuario</th>
-                        <th>Metodo de Pago</th>
-                        <th></th>
+                        <th>Id del usuario</th>
+                        <th>Nombre de usuario</th>
+                        <th class="numeric">Telefono</th>
+                        <th class="numeric">Correo electrónico</th>
+
                     </tr>
                     </thead>
                     <tbody>
                         <?php 
-                        foreach($data['payments'] as $row){
-                            $refer = $row['Referencia'];
-                            $payDate = $row['fechaPago'];
-                            $total = $row['Monto'];
-                            $idC = $row['idCompra'];
-                            $idU = $row['idUsuario'];
-                            $Method = $row['Metodo'];
+                        foreach($data['users'] as $row){
+                            $idUser = $row['idusuario'];
+                            $userName = $row['userName'];
+                            $phone = $row['phoneNumber'];
+                            $email = $row['email'];
+
                         ?>
                             <tr>
-                                <td><?= $refer?></td>
-                                <td><?= $payDate?></td>
-                                <td class="numeric"><?= $total?></td>
-                                <td class="numeric"><?= $idC?></td>
-                                <td class="numeric"><?= $idU?></td>
-                                <td><?= $Method?></td>
-                                <td>
-                                    <div class="btn btn-group" style="margin:0; padding:0; text-align: center;">
-                                        <button class="btn btn-success"><i class="fa fa-check"></i></button>
-                                        <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </td>
-                            </tr>
+                                <td><?= $idUser?></td>
+                                <td><?= $userName?></td>
+                                <td class="numeric"><?= $phone?></td>
+                                <td><?= $email?></td>
                         <?php 
                         }
                         ?>

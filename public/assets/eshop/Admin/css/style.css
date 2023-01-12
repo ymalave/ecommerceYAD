@@ -413,7 +413,7 @@ ul.sidebar-menu li a.active i {
 }
 
 .black-bg {
-    background: #ffd777;
+    background: #0fb2fe;
     border-bottom: 1px solid #c9aa5f;
 }
 
@@ -985,7 +985,7 @@ PANELS CONFIGURATIONS
 /*Panel Size*/
 
 .pn {
-	height: 250px;
+	height: 320px;
 	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -1091,7 +1091,7 @@ PANELS CONFIGURATIONS
 	background: #f4f4f4;
 	padding: 3px;
 	margin-bottom: 15px;
-	color: #c6c6c6;
+	color: #7a7878;
 }
 .white-panel .small {
 	font-size: 10px;

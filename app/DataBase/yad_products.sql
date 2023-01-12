@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-12-2022 a las 03:18:49
+-- Tiempo de generación: 12-01-2023 a las 05:06:32
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.2
 
@@ -30,11 +30,41 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `compra` (
   `idcompra` int(11) NOT NULL,
-  `idproducto` int(11) NOT NULL,
-  `cantidad` int(11) NOT NULL,
+  `idproducto` varchar(50) NOT NULL,
+  `cantidad` varchar(50) NOT NULL,
   `precio` double NOT NULL,
   `idusuario` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `compra`
+--
+
+INSERT INTO `compra` (`idcompra`, `idproducto`, `cantidad`, `precio`, `idusuario`) VALUES
+(8, '[\"1\",\"2\",\"8\"]', '[7,3,5]', 12.4, 11);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `pago`
+--
+
+CREATE TABLE `pago` (
+  `Referencia` int(10) NOT NULL,
+  `fechaPago` date NOT NULL,
+  `Monto` double NOT NULL,
+  `idCompra` int(11) NOT NULL,
+  `idUsuario` int(11) NOT NULL,
+  `Metodo` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `Observaciones` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `pago`
+--
+
+INSERT INTO `pago` (`Referencia`, `fechaPago`, `Monto`, `idCompra`, `idUsuario`, `Metodo`, `Observaciones`) VALUES
+(126589, '2023-01-09', 12.6, 8, 11, 'Tansferencia', 0);
 
 -- --------------------------------------------------------
 
@@ -129,6 +159,12 @@ ALTER TABLE `compra`
   ADD PRIMARY KEY (`idcompra`);
 
 --
+-- Indices de la tabla `pago`
+--
+ALTER TABLE `pago`
+  ADD UNIQUE KEY `index` (`Referencia`);
+
+--
 -- Indices de la tabla `producto`
 --
 ALTER TABLE `producto`
@@ -153,6 +189,12 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `compra`
+--
+ALTER TABLE `compra`
+  MODIFY `idcompra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
