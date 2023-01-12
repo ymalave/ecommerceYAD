@@ -30,12 +30,17 @@ MAIN CONTENT
                             <div class="row">
                                 <h2>$<?=$price?></h2>
                                 <p>Disponibilidad: <?=$avail?></p>
+                                <div class="btn-group">
+                                    <button class="btn btn-success"><i class="fa fa-pencil"></i>Editar</button>
+                                    <button class="btn btn-danger"><i class="fa fa-trash-o"></i>Eliminar</button>
+                                </div>
                             </div>
                         </div>
                     </div><!-- /col-md-4 -->
                 <?php
                     } 
                 ?>
+                
             </div><!-- /col-lg-9 END SECTION MIDDLE -->
                   
                   
@@ -44,6 +49,10 @@ MAIN CONTENT
       *********************************************************************************************************************************************************** -->                  
                   
                   <div class="col-lg-3 ds">
+                    <div>
+                        <button class="btn btn-primary col-md-12" style="padding: 10px; border-radius: 0; margin-bottom: 20px; text-align:center;">Agregar Producto</button>
+                    </div>
+                  
                         <!-- CALENDAR-->
                         <div id="calendar" class="mb">
                             <div class="panel green-panel no-margin">
